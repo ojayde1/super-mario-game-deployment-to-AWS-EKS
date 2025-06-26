@@ -42,13 +42,16 @@ Run the provided setup script to install Terraform, kubectl, and AWS CLI:
 chmod +x script.sh
 ./script.sh
 ```
+![Chmod script](https://github.com/user-attachments/assets/808c8d5c-007b-42bf-856d-33f52857b201)
+
+![Chmod script2](https://github.com/user-attachments/assets/8b9be1e1-05a4-4de1-ad36-4ec48575effb)
+
 
 ### 2. Configure AWS Credentials
 
 ```bash
 aws configure
 ```
-
 Provide your AWS Access Key ID, Secret Access Key, and preferred region.
 
 ### 3. Deploy EKS Cluster
@@ -61,6 +64,15 @@ terraform init
 terraform plan
 terraform apply
 ```
+![Deploy EKS1](https://github.com/user-attachments/assets/3a48cd0d-5e78-43e2-b469-4a9f2a840e7b)
+
+![Screenshot (209)](https://github.com/user-attachments/assets/4683ea8d-7408-4729-8a80-a72d144632ce)
+
+![Screenshot (210)](https://github.com/user-attachments/assets/6e56d36f-e39d-46e3-800d-027e6449b4b3)
+
+![Screenshot (212)](https://github.com/user-attachments/assets/5e169416-f5f0-4cef-8831-7563d991c34b)
+
+![Screenshot (213)](https://github.com/user-attachments/assets/cacbb712-534f-45a9-9c90-65c58d869eed)
 
 ### 4. Configure kubectl
 
@@ -69,6 +81,7 @@ Update your kubeconfig to connect to the new EKS cluster:
 ```bash
 aws eks update-kubeconfig --region us-east-2 --name EKS_CLOUD
 ```
+![Configure AWS](https://github.com/user-attachments/assets/d9cc375a-efa5-493f-b2f3-b6635579c662)
 
 ### 5. Deploy the Super Mario Game
 
@@ -78,6 +91,7 @@ Apply the Kubernetes manifests:
 kubectl apply -f deployment.yaml
 kubectl apply -f service.yaml
 ```
+![Apply Man](https://github.com/user-attachments/assets/a59a9c72-9396-416c-8f5c-90bbfbb9d0fc)
 
 ### 6. Access the Game
 
@@ -86,8 +100,11 @@ Get the LoadBalancer URL:
 ```bash
 kubectl get service mario-service
 ```
+![Kubectl access](https://github.com/user-attachments/assets/93ec7c78-aaa7-4fe9-9f82-79c2f469c543)
 
 Wait for the EXTERNAL-IP to be assigned, then access the game via the provided URL.
+
+![Screenshot (214)](https://github.com/user-attachments/assets/91e17834-7aa8-44f8-8edc-09c7cee9fea5)
 
 ## 📋 Component Details
 
